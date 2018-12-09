@@ -1,0 +1,68 @@
+{
+	"license": "MIT",
+	"version": "0.0.1",
+	"author": "Hamzah Al Hariri",
+	"name": "SmartMirror",
+	"description": "SmartMirror Application",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/alharirihamzah/Smart-Mirror.git"
+	},
+	"bugs": {
+		"url": "https://github.com/alharirihamzah/Smart-mirror/issues"
+	},
+	"homepage": "https://github.com/alharirihamzah/Smart-Mirror/blob/master/README.md",
+	"main": "index.js",
+	"scripts": {
+		"dev": "webpack --config webpack.development.config.js --progress --watch",
+		"server": "NODE_ENV=development nodemon server/index.js",
+		"build:dev": "webpack --config webpack.development.config.js --colors",
+		"build:stage": "webpack --config webpack.production.config.js --progress --colors",
+		"build:prod": "webpack --config webpack.production.config.js --progress --colors",
+		"start": "concurrently \"yarn server\" \"yarn dev\""
+	},
+	"dependencies": {
+		"express": "^4.16.3",
+		"prop-types": "^15.5.7",
+		"react": "16.4.2",
+		"react-dom": "16.4.2"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.0.0",
+		"@babel/core": "^7.0.0",
+		"@babel/plugin-proposal-class-properties": "^7.0.0",
+		"@babel/plugin-proposal-decorators": "^7.0.0",
+		"@babel/plugin-proposal-do-expressions": "^7.0.0",
+		"@babel/plugin-proposal-export-default-from": "^7.0.0",
+		"@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+		"@babel/plugin-proposal-function-bind": "^7.0.0",
+		"@babel/plugin-proposal-function-sent": "^7.0.0",
+		"@babel/plugin-proposal-json-strings": "^7.0.0",
+		"@babel/plugin-proposal-logical-assignment-operators": "^7.0.0",
+		"@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
+		"@babel/plugin-proposal-numeric-separator": "^7.0.0",
+		"@babel/plugin-proposal-optional-chaining": "^7.0.0",
+		"@babel/plugin-proposal-pipeline-operator": "^7.0.0",
+		"@babel/plugin-proposal-throw-expressions": "^7.0.0",
+		"@babel/plugin-syntax-dynamic-import": "^7.0.0",
+		"@babel/plugin-syntax-import-meta": "^7.0.0",
+		"@babel/preset-env": "^7.0.0",
+		"@babel/preset-react": "^7.0.0",
+		"babel-jest": "^19.0.0",
+		"babel-loader": "^8.0.0",
+		"babel-plugin-react-require": "^3.0.0",
+		"concurrently": "3.6.1",
+		"copy-webpack-plugin": "^4.0.1",
+		"eslint": "^3.5.0",
+		"eslint-loader": "^1.5.0",
+		"eslint-plugin-react": "^6.2.2",
+		"extract-text-webpack-plugin": "3.0.2",
+		"file-loader": "^0.8.5",
+		"html-webpack-plugin": "^2.29.0",
+		"imports-loader": "^0.6.5",
+		"nodemon": "1.18.3",
+		"styled-components": "4.1.2",
+		"uglifyjs-webpack-plugin": "1.2.7",
+		"webpack": "3.10.0"
+	}
+}
